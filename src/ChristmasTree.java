@@ -43,21 +43,19 @@ public class ChristmasTree {
 }
 	
 	void drawTreeTrunk() {
-		// 1. Move the tortoise half the width of the tree
 			Tortoise.move(treeWidth/2);
-		// 2. Change the tortoise so that it is pointing straight down
 			Tortoise.turn(90);
-		// 4. Set the pen width to the tree width divided by 10
 			Tortoise.setPenWidth(treeWidth/10);
-		// 5. Change the color of the line the tortoise draws to brown
 			Tortoise.setPenColor(Color.DARK_GRAY);
-		// 3. Move the tortoise a quarter the tree width
+			Tortoise.setSpeed(10);
 			Tortoise.move(treeWidth/4);
+
 	}
 	
 	void drawStar() {
-		// * Optional: Draw a red star on top of the tree. Hint: 144 degrees makes a star.
 		for (int i = 0; i < 5; i++) {
+			Tortoise.setSpeed(10);
+			Tortoise.setPenColor(Color.RED);
 			Tortoise.move(25);
 			Tortoise.turn(144);
 		}
